@@ -1,3 +1,8 @@
+2.2.0 / 2016-09-08
+==================
+  * Pass arguments to S3 upload
+  * Update dependencies
+
 2.1.3 / 2016-02-21
 ==================
   * Update dev. supertest

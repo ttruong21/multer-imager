@@ -22,6 +22,26 @@ describe('multer-imager', function() {
       }
     });
   });
+  it('accepts to pass s3 options', function() {
+    multerS3({
+      bucket: 'bucket',
+      dirname: 'uploads/',
+      accessKeyId: 'accessKeyId',
+      secretAccessKey: 'secretAccessKey',
+      region: 'region',
+      gm: {
+        format: 'png',
+        scale: {
+          width: 200,
+          height: 200,
+          type: 'contain'
+        }
+      },
+      s3opts: {
+        ContentType: 'image/png'
+      }
+    });
+  });
   it('stores the options within each instance', function() {
     var multer = multerS3({
       bucket: 'bucket',

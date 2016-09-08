@@ -57,6 +57,9 @@ var upload = multer({
                                // or use rotate:degrees 
           density: 300,        // set the image density. useful when converting pdf to images
         }
+    s3opts: {                  // [Optional]: pass options to s3
+          ContentType: 'image/png'
+    }
   })
 });
 
